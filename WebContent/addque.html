@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login </title>
+      <link rel="stylesheet" href="style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+ <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               ADD QUESTION
+            </div>
+           
+         </div>
+         <div class="form-container">
+            
+              
+               
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+            
+               <form action="addque.jsp" method="post" class="login">
+                  <div class="field">
+                     <input type="text" placeholder="Enter Question" name="que" required>
+                  </div>
+                  <div class="field">
+                     <input type="text" placeholder="Strongly Dis eg o5" name="o1" required>
+                  </div>
+                  <div class="field">
+                     <input type="text" placeholder="Disagree eg o5" name="o2" required>
+                  </div>
+                  <div class="field">
+                     <input type="text" placeholder="Neutral eg o5" name="o3" required>
+                  </div>
+                  <div class="field">
+                     <input type="text" placeholder="Agree eg o5" name="o4" required>
+                  </div>
+                   <div class="field">
+                     <input type="text" placeholder="Strogly Agree eg o5" name="o5" required>
+                  </div>
+                  <div class="pass-link">
+                     <a href="admincheck"></a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="ADD">
+                  </div>
+               </form>
+            
+            </div>
+         </div>
+      
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
+   </body>
+</html>
